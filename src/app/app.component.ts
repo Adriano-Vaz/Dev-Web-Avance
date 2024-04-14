@@ -2,13 +2,13 @@ import {Component, inject, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavbarComponent} from "./components/navbar/navbar.component";
 import {LightPageComponent} from "./components/light-page/light-page.component";
-import {AuthenticationComponent} from "./components/authentication/authentication.component";
 import {OidcSecurityService} from "angular-auth-oidc-client";
+import {AccountComponent} from "./components/account/account.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, LightPageComponent, AuthenticationComponent],
+  imports: [RouterOutlet, NavbarComponent, LightPageComponent, AccountComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -23,6 +23,7 @@ export class AppComponent implements OnInit{
       if (isAuthenticated) {
         console.log("User is authenticated");
         console.log("User data: ", userData);
+        console.log("Name of user : ", userData.name);
       } else {
         console.log("User is not authenticated");
         this.login()
@@ -32,7 +33,6 @@ export class AppComponent implements OnInit{
 
   login() {
     this.oidcSecurityService.authorize();
-    console.log("login loop");
   }
 
   logout() {
