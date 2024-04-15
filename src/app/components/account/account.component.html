@@ -1,1 +1,14 @@
-<p>{{userData.name}}</p>
+<div class="h-full w-full flex justify-center items-center">
+  <div class="bg-gray-500 p-3 rounded m-auto w-fit text-white">
+    <span class="font-bold">Current user : </span>{{name}}
+    <br>
+    <span class="font-bold">Email : </span>{{email}}
+    <br>
+    <br>
+    <div class="flex w-full justify-center">
+    <button class="bg-red-800 px-4 py-2 rounded" (click)="logout()">
+      Log Out
+    </button>
+    </div>
+  </div>
+</div>
