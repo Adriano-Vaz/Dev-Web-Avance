@@ -31,7 +31,7 @@ export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
   provideHttpClient(),
   provideAuth({config: {
-      authority: 'http://localhost:8080/realms/network-manager',
+      authority: 'http://localhost:8081/realms/network-manager',
       redirectUrl: "http://localhost:4200",
       postLogoutRedirectUri: "http://localhost:4200",
       clientId: 'angular-client',

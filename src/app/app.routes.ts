@@ -9,5 +9,5 @@ export const routes: Routes = [
   {path: "light", component: LightPageComponent},
   {path: "networks", component: NetworksComponent},
   {path: "account", component: AccountComponent},
-  {path: "**", redirectTo: "light"}
+  {path: "**", redirectTo: "networks"}
 ];
