@@ -16,7 +16,8 @@ export class LightComponent {
   @Input("light")
   light: any = {
     toggled: false,
-    title: "UNKNOWN"
+    title: "UNKNOWN",
+    color: "UNKNOWN"
   };
 
   @Output("trigger")

@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {NgClass, NgForOf} from "@angular/common";
 import {DevicesService} from "../../services/devices.service";
-import { TableModule } from 'primeng/table';
+import {TableModule} from 'primeng/table';
 import {ButtonModule} from "primeng/button";
 import {RatingModule} from "primeng/rating";
 import {TagModule} from "primeng/tag";
+
+interface Column {
+  field: string;
+  header: string;
+}
 
 @Component({
   selector: 'app-devices',
@@ -13,7 +18,6 @@ import {TagModule} from "primeng/tag";
   imports: [
     NgClass,
     NgForOf,
-    DevicesComponent,
     FormsModule,
     TableModule,
     ButtonModule,
@@ -24,14 +28,6 @@ import {TagModule} from "primeng/tag";
   styleUrl: './devices.component.css'
 })
 export class DevicesComponent {
-  devices: any = {
-    name: "",
-    type: "",
-    brand: "",
-    ports: "",
-    network: "",
-    ip: ""
-  }
   constructor(protected devicesService: DevicesService) {
   }
 }

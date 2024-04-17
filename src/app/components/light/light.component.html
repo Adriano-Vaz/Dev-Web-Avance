@@ -4,7 +4,7 @@
        [ngClass]="light.toggled ? '' : 'bg-red-900'" [ngStyle]="{background: light.toggled ? light.color : ''}">
     <div class="text-white">{{ light.toggled ? "Activé" : "Off" }}</div>
   </div>
-  <div>{{ light.title }}</div>
+  <div class="text-white">{{ light.title }}</div>
   <div class="px-6 py-1.5 rounded bg-red-800 text-white" (click)="launchTrigger()">-</div>
 
 </div>
