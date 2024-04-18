@@ -6,6 +6,9 @@ import {TableModule} from 'primeng/table';
 import {ButtonModule} from "primeng/button";
 import {RatingModule} from "primeng/rating";
 import {TagModule} from "primeng/tag";
+import {ToastModule} from "primeng/toast";
+import {ToolbarModule} from "primeng/toolbar";
+import {RippleModule} from "primeng/ripple";
 
 interface Column {
   field: string;
@@ -22,12 +25,25 @@ interface Column {
     TableModule,
     ButtonModule,
     RatingModule,
-    TagModule
+    TagModule,
+    ToastModule,
+    ToolbarModule,
+    RippleModule
   ],
   templateUrl: './devices.component.html',
   styleUrl: './devices.component.css'
 })
 export class DevicesComponent {
   constructor(protected devicesService: DevicesService) {
+  }
+  currentUser = JSON.parse(sessionStorage.getItem('0-angular-client') || '{}').userData?.name;
+  Delete: string = '';
+
+  openNew() {
+
+  }
+
+  deleteSelectedProducts() {
+
   }
 }
