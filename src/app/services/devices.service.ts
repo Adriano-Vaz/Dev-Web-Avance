@@ -12,7 +12,7 @@ export class DevicesService {
     this.refreshDevices();
   }
   refreshDevices(){
-    this.httpClient.get("/api/devices/" + JSON.parse(sessionStorage.getItem('0-angular-client') || '{}').userData?.preferred_username).subscribe((devices: any) => {
+    this.httpClient.get("/api/devices/" + JSON.parse(sessionStorage.getItem('0-angular-client') || '{}').userData?.sub).subscribe((devices: any) => {
       this.deviceArray = devices;
       console.log(this.deviceArray)
     });

@@ -1,0 +1,11 @@
+tr {
+  border : 0 solid white;
+}
+td {
+  border-bottom : 1px solid white;
+  padding : 5px;
+}
+th {
+  border-bottom : 1px solid white;
+  padding : 5px;
+}
