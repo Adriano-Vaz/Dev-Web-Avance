@@ -1,14 +1,13 @@
 import {Component, inject, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NavbarComponent} from "./components/navbar/navbar.component";
-import {LightPageComponent} from "./components/light-page/light-page.component";
 import {OidcSecurityService} from "angular-auth-oidc-client";
 import {AccountComponent} from "./components/account/account.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, LightPageComponent, AccountComponent],
+  imports: [RouterOutlet, NavbarComponent, AccountComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

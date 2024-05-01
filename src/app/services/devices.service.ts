@@ -20,4 +20,8 @@ export class DevicesService {
   getAllDevices() {
     return this.deviceArray;
   }
+
+  getProducts() {
+    return Promise.resolve(this.getAllDevices());
+  }
 }
